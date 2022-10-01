@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>Vi_Du_HTML_CSS</title>
+    <link rel="icon"  type="img/x-icon" href="25231.ico">
+ 
+</head>
+<body >
+    <div id="wrapper">
+        <header>
+            <div id="toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div id="head" class="container">
+                
+                <nav >
+                   <a href="#" id="logo">
+                    <img src="logo.png" alt="Hổ Cute">
+                    </a>
+                    <ul id="main-menu">
+                        <li class="home"><a href="#">Trang chủ</a></li>
+                        <li class="about"><a href="https://khanguyendinh37.github.io/">Trang cá nhân</a></li>
+                        <li class="has-child"><a href="">Ví dụ</a>
+                            <ul class="sub-menu">
+                                <li><a href="CV/index1.html">Ví dụ html/css </a></li>
+                                <li><a href="">Ví dụ javascript </a></li>
+                                <li><a href="">Ví dụ 3</a></li>
+                            </ul>
+                        </li>
+                        <li  class="has-child"><a href="">Bài thực hành</a>
+                            <ul class="sub-menu">
+                                <li><a href="vidu_html_css/Th1.html">Thực hành 1</a></li>
+                                <li><a href="">Thực hành 2</a></li>
+                                <li><a href="">Thực hành 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="contract"><a href="#id">Liên hệ</a></li>
+                    </ul>
+    
+                </nav>
+            </div>
+            
+        </header>
+        
+        <div id="banner">
+
+        </div>
+        <div class="kk">
+
+        </div>
+        <div id="content"class="container">
+            <div class="lgo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div id="icon">
+                <a href="https://www.facebook.com/profile.php?id=100015943807718"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/khanguyendinh37"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/blackcool_37/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+           <div>
+            <h1> Trang web học tập của tôi</Trang></h1>
+            <p>
+                Xin chào bạn ! <br>
+                Tôi rất vui khi bạn có thể dành thời gian để tìm hiểu trang web này.
+                Tuy nó không được đẹp và không gây được nhiều ấn tượng với bạn nhưng tôi chắc rằng mình đã bỏ rất nhiều thời gian để dần hoàn thiện nó.
+                Trang web này mang tính quá trình học và thực hành của tôi nếu có gì còn thiếu sót mong bạn có thể bổ sung bằng cách liên hệ với tôi.
+                Đây cũng là mục tiêu mà mình muốn hoàn thiện nhất và đẹp mắt nhất đến mọi cá nhân. Và tôi cũng chân thành cảm ơn bạn vì đã ghé thắm trang web nay.
+                <br>Một lần nữa xin chan thành cảm ơn bạn!
+            </p>
+           </div>
+           <div id="id">
+               
+                <p><strong>Họ & Tên     :</strong> Nguyễn Đình Kha</p>
+                <p><strong>Năm Sinh     :</strong> 09 - 06 - 2000</p>
+                <p><strong>Số Điện Thoại:</strong> (+84) 092 553 1655</p>
+                 <a href="https://www.facebook.com/profile.php?id=100015943807718"><strong>facebook</strong></a>
+               
+           </div>
+        </div>
+        <div class="kk"></div>
+        <div id="chan" class="container">
+           
+            <div id="icon">
+                <a href="https://www.facebook.com/profile.php?id=100015943807718"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/khanguyendinh37"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/blackcool_37/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            
+           
+
+        </div>
+
+    </div>
+    <div id="backtop">
+        <i class="fa-solid fa-angle-up"></i>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                $('header').addClass('sticky');
+            }
+            else{
+                $('header').removeClass('sticky');
+            }
+            });
+        });
+        $(document).ready(function() {
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                $('#backtop').fadeIn();
+            }
+            else{
+                $('#backtop').fadeOut();
+            }
+            });
+            $('#backtop').click(function() {
+                $('html,body').animate({
+                    scrollTop:0
+                },1000);
+            });
+
+        });
+        $(document).ready(function() {
+            $('#toggle').click(function() {
+                $('nav').slideToggle();
+            });
+            
+        });
+        
+    </script>
+    
+
+</body>
+</html>
