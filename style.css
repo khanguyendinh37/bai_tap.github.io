@@ -282,30 +282,3 @@ nav{
     right: 20px;
     cursor: pointer;
 }
-#toggle{
-    display: none;
-    background-color:rgba(33, 34, 34, 0.87) ;
-    color:  rgba(22, 172, 22, 0.473);
-    text-align: right;
-    padding: 10px ;
-    font-size: 20px;
-    cursor: pointer;
-}
-#toggle:hover{
-    color:rgba(4, 241, 4, 0.555);
-}
-@media screen and (max-width:768px) {
-    #logo{
-        display:none;
-    }
-    nav {
-        display: none;
-    }
-    #main-menu{
-        flex-direction: column;
-        text-align: center;
-    }
-    #toggle{
-        display: block;
-    }
-}
