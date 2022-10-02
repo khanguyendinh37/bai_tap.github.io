@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>hoc_javascrip</title>
+    <link rel="icon" type="x-icon" href="25231.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+       
+        #dongHo{
+            background-color: rgba(37, 37, 37, 0.938);
+            color: rgb(41, 161, 11);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            margin: 30px auto;
+            text-align: center;
+            border: 2px solid red;
+            display: none;
+        }
+        #dongHo p{
+           
+            padding-top:25% ;
+        }
+        #den{
+            background-color: rgba(54, 54, 54, 0.89);
+            text-align: center;
+            color: antiquewhite;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px 0px;
+
+        }
+        #den button{
+            width: 100px;
+            height: 40px;
+            color:rgb(17, 17, 16);
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        #den button:hover{
+            background-color:rgba(44, 43, 43, 0.911);
+            color:rgb(240, 240, 229);
+        }
+        #chuyend{
+            background-color: rgba(53, 51, 51, 0.897);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 60px 50px;
+            color:aliceblue;
+        }
+        #chuyend button{
+            width: 200px;
+            height: 40px;
+            border: 2px solid rgb(92, 247, 61);
+            border-radius: 10px;
+            font-size: 16px;
+
+
+        }
+        #chuyend button:hover{
+            color: aliceblue;
+            background-color:  rgba(53, 51, 51, 0.897);
+        }
+        #dongho{
+            background-color: rgb(53, 55, 56);
+            text-align: center;
+            width:auto;
+            height: 900px;
+            padding: 40px 0px;
+
+        }
+        #dongho button{
+            width: 200px;
+            height: 40px;
+            border: 2px solid rgb(51, 255, 0);
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #dongho button:hover{
+            background-color: rgb(26, 26, 26);
+            color: aliceblue;
+        }
+        #backtop {
+            font-size: 25px;
+            width:50px;
+            height: 50px;
+            background-color: rgba(19, 17, 17, 0.815);
+            color:rgba(4, 241, 4, 0.555);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body> 
+    <div id="den">
+    <h1>Học Javascrip ở đây </h1>
+    
+    <p>Hiệu ứng chuyển ảnh trong javascrip</p>
+    
+    <button onclick="bat()">bật đèn</button>
+    
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    
+    <button onclick="tat()">tắt đèn</button>
+
+    </div>
+   
+
+<div id="chuyend">
+    <h4>chuyển nội dung</h4>
+    <p id="demo" ><strong>JavaScript có thể thay đổi nội dung HTML</strong> <br><br>
+        Một trong nhiều phương pháp HTML JavaScript là getElementById().
+        <br>
+        Ví dụ dưới đây "tìm" một phần tử HTML (với id = "demo") và thay đổi nội dung phần tử (innerHTML) thành "Hello JavaScript": </p>
+    <button type="button" onclick="myFunction()">bấm vào đây</button>
+    <script src="main.js"></script>
+    
+
+</div>
+<div id="dongho">
+    <button id ="nut"  type="button" onclick="thoiGian()">Nút đồng hồ</button>
+    <div id="dongHo">
+    
+    <p id="time"></p>
+    </div>
+</div>
+<div id="backtop">
+    <i class="fa-solid fa-angle-up"></i>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+    $('#nut').click(function() {
+        $('#dongHo').slideToggle();
+    });
+});
+    $(document).ready(function() {
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                $('#backtop').fadeIn();
+            }
+            else{
+                $('#backtop').fadeOut();
+            }
+            });
+            $('#backtop').click(function() {
+                $('html,body').animate({
+                    scrollTop:0
+                },1000);
+            });
+
+        });
+</script>
+</body>
+</html>
